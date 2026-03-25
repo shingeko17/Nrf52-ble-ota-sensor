@@ -1,0 +1,5 @@
+# nRF52840 BLE OTA Sensor - Application Kconfig
+
+mainmenu "nRF52 BLE OTA Sensor Configuration"
+
+source "Kconfig.zephyr"

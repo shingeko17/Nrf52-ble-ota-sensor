@@ -1,0 +1,21 @@
+/*
+ * nRF52840 DK - Device Tree Overlay
+ * No external peripherals needed for this project.
+ * Using only onboard: temp sensor, LEDs, buttons.
+ *
+ * The default nrf52840dk_nrf52840.dts already defines:
+ * - 4 LEDs (led0..led3)
+ * - 4 Buttons (sw0..sw3)
+ * - UART0 for logging
+ * - Internal TEMP sensor
+ *
+ * Add overlay entries here if external I2C/SPI
+ * sensors are added later.
+ */
+
+/ {
+	chosen {
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+	};
+};
